@@ -5,9 +5,11 @@ defmodule KinoShell.MixProject do
     [
       app: :kino_shell,
       version: "0.1.0",
+      description: "Just a SmartCell to run bash scripts in Livebook",
       elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      package: package()
     ]
   end
 
@@ -23,6 +25,16 @@ defmodule KinoShell.MixProject do
     [
       {:kino, "~> 0.10.0"},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
+    ]
+  end
+
+  def package do
+    [
+      maintainers: ["Thomas Millar"],
+      licenses: ["Apache-2.0"],
+      links: %{
+        "GitHub" => "https://github.com/thmsmlr/kino_shell"
+      }
     ]
   end
 end

@@ -3,6 +3,8 @@
 [![KinoShell version](https://img.shields.io/hexpm/v/kino_shell.svg)](https://hex.pm/packages/kino_shell)
 [![Hex Docs](https://img.shields.io/badge/hex-docs-lightgreen.svg)](https://hexdocs.pm/kino_shell/)
 
+<img width="1420" alt="kino_shell" src="https://github.com/thmsmlr/kino_shell/assets/167206/b9bb5e61-053f-4f51-80d8-f4f8bfaf13cc">
+
 Just a simple smartcell to run a bash script.
 Nothing more, nothing less.
 

@@ -6,7 +6,7 @@
 <img width="1420" alt="kino_shell" src="https://github.com/thmsmlr/kino_shell/assets/167206/b9bb5e61-053f-4f51-80d8-f4f8bfaf13cc">
 
 Just a simple smartcell to run a bash script.
-Nothing more, nothing less.
+You can run it in the background or as an auto restarting daemon.
 
 Why? Well you see, I use [Livebook](https://livebook.dev) for data analysis for my company.
 Yes, eventually I'll have to setup a proper data warehouse and start doing my business intelligence by querying that.
@@ -23,7 +23,7 @@ To bring `kino_shell` to Livebook all you need to do is Mix.install/2:
 
 ```elixir
 Mix.install([
-  {:kino_shell, "~> 0.1.0"}
+  {:kino_shell, "~> 0.1.1"}
 ])
 ```
 

@@ -4,7 +4,7 @@ defmodule KinoShell.MixProject do
   def project do
     [
       app: :kino_shell,
-      version: "0.1.0",
+      version: "0.1.1",
       description: "Just a SmartCell to run bash scripts in Livebook",
       elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
@@ -23,7 +23,7 @@ defmodule KinoShell.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:kino, "~> 0.10.0"},
+      {:kino, "~> 0.12.2"},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end

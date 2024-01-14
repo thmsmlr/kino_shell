@@ -6,8 +6,12 @@ defmodule KinoShell.ShellScriptCell do
   use Kino.SmartCell, name: "Shell Script"
 
   @impl true
-  def init(_attrs, ctx) do
-    ctx = assign(ctx, in_background: false, restart: false)
+  def init(attrs, ctx) do
+    ctx =
+      assign(ctx,
+        in_background: Map.get(attrs, :in_background, false),
+        restart: Map.get(attrs, :restart, false)
+      )
 
     {:ok, ctx,
      editor: [
@@ -40,12 +44,14 @@ defmodule KinoShell.ShellScriptCell do
 
   @impl true
   def to_attrs(ctx) do
-    %{"in_background" => ctx.assigns.in_background, "restart" => ctx.assigns.restart}
-    |> IO.inspect()
+    %{
+      in_background: ctx.assigns.in_background,
+      restart: ctx.assigns.restart
+    }
   end
 
   @impl true
-  def to_source(%{"in_background" => true, "restart" => restart} = attrs) do
+  def to_source(%{in_background: true, restart: restart} = attrs) do
     r = if restart, do: :permanent, else: :temporary
 
     quote do
@@ -129,7 +135,7 @@ defmodule KinoShell.ShellScriptCell do
       `
 
       const in_background = ctx.root.querySelector("input[name='in_background']");
-      in_background.checked = payload.source;
+      in_background.checked = payload.in_background;
 
       in_background.addEventListener("change", (event) => {
         ctx.pushEvent("update", { in_background: event.target.checked });

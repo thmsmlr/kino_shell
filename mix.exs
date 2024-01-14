@@ -4,7 +4,7 @@ defmodule KinoShell.MixProject do
   def project do
     [
       app: :kino_shell,
-      version: "0.1.1",
+      version: "0.1.2",
       description: "Just a SmartCell to run bash scripts in Livebook",
       elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,

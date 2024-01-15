@@ -3,7 +3,7 @@
 [![KinoShell version](https://img.shields.io/hexpm/v/kino_shell.svg)](https://hex.pm/packages/kino_shell)
 [![Hex Docs](https://img.shields.io/badge/hex-docs-lightgreen.svg)](https://hexdocs.pm/kino_shell/)
 
-<img width="1420" alt="kino_shell" src="https://github.com/thmsmlr/kino_shell/assets/167206/b9bb5e61-053f-4f51-80d8-f4f8bfaf13cc">
+<img alt="kino_shell" src="https://github.com/thmsmlr/kino_shell/assets/167206/e1ff0253-914c-4a6b-9ee7-d97feb9b3509">
 
 Just a simple smartcell to run a bash script.
 You can run it in the background or as an auto restarting daemon.
